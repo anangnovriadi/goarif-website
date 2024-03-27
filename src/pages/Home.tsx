@@ -11,8 +11,7 @@ const Home: React.FC = () => {
           <div>
             <h1 className="text-white text-4xl font-bold mb-5"></h1>
             <h1 className="text-2xl text-gray-800 mb-8 font-mono">
-              Converse with your data to unlock real-time Insights.
-              Transform your data into strategic assets.
+              Welcome to Arif - Where Data Meets Intelligence!
             </h1>
             <a href="https://wa.me/628117576088" className="shadow focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-800 dark:focus:ring-green-800 font-mono">Start Try</a>
           </div>
@@ -23,7 +22,7 @@ const Home: React.FC = () => {
       </div>
       <div className="mx-auto px-24 py-24">
         <div className="text-center px-[140px]">
-          <p className="text-3xl text-gray-500 font-mono">Arif allows you to interact directly with your data, asking questions and receiving instant, contextual answers. Whether you're identifying consumer insights or evaluating operational efficiencies, your data is no longer a passive report, it will take you to actionable insights.</p>
+          <p className="text-3xl text-gray-600 font-mono">Arif allows you to interact directly with your data, asking questions and receiving instant, contextual answers. Whether you're identifying consumer insights or evaluating operational efficiencies, your data is no longer a passive report, it will take you to actionable insights.</p>
         </div>
       </div>
       <div className="mx-auto px-24 pt-16 pb-10">
@@ -31,15 +30,13 @@ const Home: React.FC = () => {
           <div className="w-full">
             <img src="/assets/content1.png" className="" alt="Banner" />
           </div>
-          <div>
-            <p className="text-lg font-bold text-gray-700 mb-5 font-mono">Why you need to check out Arif Analytics:</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Strategic Decision-Making: </b>AI-powered analytics enable real-time, data-driven decisions that align with business objectives, saving time and reducing uncertainty.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Operational Efficiency: </b>Automate routine analytics and reporting tasks, freeing up managerial resources for more strategic endeavors, which is especially valuable for CRM managers.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Competitive Edge: </b>Advanced analytics provide deeper market insights, helping you outmaneuver competitors with more targeted and effective strategies.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Revenue Growth: </b>Precision targeting and personalization capabilities enable more effective marketing campaigns, driving sales and revenue.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Customer Experience Enhancement:  </b>Real-time analytics provide insights into customer behaviors and preferences, allowing for a more personalized and satisfying customer experience.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Data-Driven Culture: </b>AI analytics offer intuitive dashboards and easy-to-understand insights that foster a data-driven culture across the organization.</p>
-            <p className="text-md text-gray-500 mb-2 font-mono"><b>Cost-Effectiveness: </b>Through automation and increased accuracy, significantly reduce the costs related to data collection and analysis.</p>
+          <div className="w-5/6">
+            <p className="text-lg font-bold text-gray-700 mb-5 font-mono">Key Features:</p>
+            <p className="text-md text-gray-500 mb-2 font-mono"><b>Intelligent Data Visualization: </b>Arif platform offers intuitive and dynamic data visualization tools that transform complex datasets into actionable insights. From interactive charts to customizable dashboards, visualize key metrics with ease and clarity.</p>
+            <p className="text-md text-gray-500 mb-2 font-mono"><b>Rapid Audio and Video Transcription: </b>Say goodbye to time-consuming transcription tasks. Transcribing audio and video files is effortless and instantaneous. Arif AI-powered transcription engine accurately converts spoken words into text within seconds, saving you valuable time and resources.</p>
+            <p className="text-md text-gray-500 mb-2 font-mono"><b>AI-Powered Insights: </b>Leverage the power of artificial intelligence to uncover hidden patterns, trends, and correlations within your data. Our advanced analytics algorithms analyze vast amounts of data to provide you with actionable insights that drive business growth and innovation.</p>
+            <p className="text-md text-gray-500 mb-2 font-mono"><b>Scalable and Secure: </b>Whether you're a small startup or a large enterprise, Arif scales to meet your needs. Rest assured knowing that your data is protected with state-of-the-art security measures, ensuring confidentiality and compliance at every step.</p>
+            <p className="text-md text-gray-500 mb-2 font-mono"><b>Integration: </b>Our platform is designed to work with a wide range of data sources and formats, allowing you to maximize efficiency and productivity across your organization.</p>
           </div>
         </div>
       </div>
