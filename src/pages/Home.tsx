@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       <div className="mx-auto px-24 pt-16 pb-10">
         <div className="flex justify-between gap-10">
           <div className="w-full">
-            <img src="/assets/banner1.png" className="" alt="Banner" />
+            <img src="/assets/banner1.png" className="h-[420px]" alt="Banner" />
           </div>
           <div className="w-5/6">
             <>
