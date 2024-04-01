@@ -4,7 +4,7 @@ const Header = ({ title }: HeaderProps) => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900" style={{ backgroundColor: '#CAEEFB' }}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logo_goarif_black.png" className="h-16" alt="Logo" />
+            <img src="/logo_blue.png" className="h-16" alt="Logo" />
           </a>
           <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
@@ -21,7 +21,7 @@ const Header = ({ title }: HeaderProps) => {
                 <a href="/" className="block py-2 px-3 text-gray-900 rounded md:hover:text-blue-700 font-bold ">About</a>
               </li>
               <li>
-                <a href="https://wa.me/628117576088" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Get Demo</a>
+                <a href="https://wa.me/628117576088" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Join our waitlist</a>
               </li>
             </ul>
           </div>
