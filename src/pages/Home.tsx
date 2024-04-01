@@ -8,6 +8,21 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 
+function Icon({ id, open }: { id: Number, open: any }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+    </svg>
+  );
+}
+
 const Home: React.FC = () => {
   const [open, setOpen] = React.useState(1);
  
@@ -15,8 +30,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div className="mx-auto px-24 py-10" style={{ backgroundColor: '#CAEEFB' }}>
-        <div className="mx-auto flex justify-between gap-10">
+      <div className="mx-auto px-8 md:px-24 py-10" style={{ backgroundColor: '#CAEEFB' }}>
+        <div className="mx-auto md:flex justify-between gap-10">
           <div>
             <h1 className="text-white text-4xl font-bold mb-5"></h1>
             <h1 className="text-2xl text-gray-800 mb-2">
@@ -28,12 +43,12 @@ const Home: React.FC = () => {
             {/* <a href="https://wa.me/628117576088" className="shadow focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-800 dark:focus:ring-green-800 ">Let's connect</a> */}
           </div>
           <div className="w-auto">
-            <img src="/assets/banner1.png" className="h-[420px] w-[600px]" alt="Banner" />
+            <img src="/assets/banner1.png" className="md:h-[420px] md:w-[600px]" alt="Banner" />
           </div>
         </div>
       </div>
-      <div className="mx-auto px-24 py-24">
-        <div className="text-center px-[140px]">
+      <div className="mx-auto px-8 md:px-24 py-24">
+        <div className="text-center md:px-[140px]">
           <p className="text-3xl text-gray-600 mb-2">Arif allows you to interact directly with your data, asking questions</p>
           <p className="text-3xl text-gray-600 mb-2">and receiving instant, contextual answers. Whether you're</p>
           <p className="text-3xl text-gray-600 mb-2">identifying consumer insights or evaluating operational</p>
@@ -41,21 +56,21 @@ const Home: React.FC = () => {
           <p className="text-3xl text-gray-600">it will take you to actionable insights.</p>
         </div>
       </div>
-      <div className="mx-auto px-24 pt-16 pb-10">
-        <div className="flex justify-between gap-10">
-          <div className="w-full">
+      <div className="mx-auto px-8 md:px-24 pt-16 pb-10">
+        <div className="md:flex justify-between gap-10">
+          <div className="w-full pb-12 md:pb-0">
             <img src="/assets/content1.png" className="h-[460px]" alt="Banner" />
           </div>
           <div className="w-5/6">
             <p className="text-xl font-bold mb-4">Key Features:</p>
             <>
-              <Accordion open={open === 1} placeholder={undefined}>
+              <Accordion open={open === 1} icon={<Icon id={1} open={open} />} placeholder={undefined}>
                 <AccordionHeader onClick={() => handleOpen(1)} placeholder={undefined} style={{ color: '#3B81F6' }}>Intelligent Data Visualization</AccordionHeader>
                 <AccordionBody style={{fontSize: '18px'}}>
                   Arif makes complex data easy to understand through user-friendly dashboards and charts.
                 </AccordionBody>
               </Accordion>
-              <Accordion open={open === 2} placeholder={undefined}>
+              <Accordion open={open === 2} icon={<Icon id={2} open={open} />} placeholder={undefined}>
                 <AccordionHeader onClick={() => handleOpen(2)} placeholder={undefined} style={{ color: '#3B81F6' }}>
                   Rapid Audio and Video Transcription
                 </AccordionHeader>
@@ -63,7 +78,7 @@ const Home: React.FC = () => {
                   Quickly converts audio and video into accurate text transcripts with Arif platform.
                 </AccordionBody>
               </Accordion>
-              <Accordion open={open === 3} placeholder={undefined}>
+              <Accordion open={open === 3} icon={<Icon id={3} open={open} />} placeholder={undefined}>
                 <AccordionHeader onClick={() => handleOpen(3)} placeholder={undefined} style={{ color: '#3B81F6' }}>
                   AI-Powered Insights
                 </AccordionHeader>
@@ -71,7 +86,7 @@ const Home: React.FC = () => {
                   Arif uses AI to find meaningful patterns in large amounts of data, giving you the knowledge to make better decisions.
                 </AccordionBody>
               </Accordion>
-              <Accordion open={open === 4} placeholder={undefined}>
+              <Accordion open={open === 4} icon={<Icon id={4} open={open} />} placeholder={undefined}>
                 <AccordionHeader onClick={() => handleOpen(4)} placeholder={undefined} style={{ color: '#3B81F6' }}>
                   Scalable and Secure
                 </AccordionHeader>
@@ -79,7 +94,7 @@ const Home: React.FC = () => {
                   Our Arif platform work for businesses of all sizes and prioritizes the security of your data.
                 </AccordionBody>
               </Accordion>
-              <Accordion open={open === 5} placeholder={undefined}>
+              <Accordion open={open === 5} icon={<Icon id={5} open={open} />} placeholder={undefined}>
                 <AccordionHeader onClick={() => handleOpen(5)} placeholder={undefined} style={{ color: '#3B81F6' }}>
                   Integration
                 </AccordionHeader>
@@ -92,7 +107,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-16 px-24 pt-16 pb-16" style={{ backgroundColor: '#CAEEFB' }}>
+      <div className="mx-auto mt-16 px-8 md:px-24 pt-16 pb-16" style={{ backgroundColor: '#CAEEFB' }}>
         <div className="text-center">
           {/* <div className="mb-8">
             <p className="text-xl text-gray-600 font-bold ">Trusted by.</p>
@@ -106,9 +121,9 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-16 px-40 pt-16 pb-16">
+      <div className="mx-auto mt-16 px-8 md:px-40 pt-16 pb-16">
         <form action="mailto:dora@goarif.co" className="mx-auto">
-          <div className="mx-auto grid grid-cols-2 gap-4 mb-2">
+          <div className="mx-auto md:grid md:grid-cols-2 gap-4 mb-2">
             <div className="mb-5">
               <label className="block mb-2 text-sm font-medium text-gray-900 ">First Name</label>
               <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="firstname" placeholder="First Name" />
@@ -118,7 +133,7 @@ const Home: React.FC = () => {
               <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" name="lastname" placeholder="Last Name" />
             </div>
           </div>
-          <div className="mx-auto grid grid-cols-2 gap-4 mb-2">
+          <div className="mx-auto md:grid md:grid-cols-2 gap-4 mb-2">
             <div className="mb-5">
               <label className="block mb-2 text-sm font-medium text-gray-900 ">Company</label>
               <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" name="company" placeholder="Company" />
