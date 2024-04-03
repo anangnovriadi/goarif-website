@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Card from '../components/Card';
 import { TypeAnimation } from 'react-type-animation';
 import {
@@ -23,8 +23,14 @@ function Icon({ id, open }: { id: Number, open: any }) {
   );
 }
 
+const useMountEffect = (fun: any) => useEffect(fun, []);
+
 const Home: React.FC = () => {
   const [open, setOpen] = React.useState(1);
+  const myRef: any = useRef(null);
+
+  const executeScroll = () => myRef.current.scrollIntoView();
+  useMountEffect(executeScroll);
  
   const handleOpen = (value: any) => setOpen(open === value ? 0 : value);
 
@@ -34,12 +40,16 @@ const Home: React.FC = () => {
         <div className="mx-auto md:flex justify-between gap-10">
           <div>
             <h1 className="text-white text-4xl font-bold mb-5"></h1>
-            <h1 className="text-2xl text-gray-800 mb-2">
+            <h1 className="text-4xl font-bold text-gray-800 mb-6" style={{ fontSize: '50px' }}>
               Welcome to Arif.
             </h1>
-            <h1 className="text-2xl text-gray-800 mb-8 ">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
               Where Data Meets Intelligence!
             </h1>
+            <h1 className="text-2xl font-bold text-gray-800 mb-8 ">
+              Every marketer can benefit from this solution.
+            </h1>
+            <button onClick={executeScroll} type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Why Us</button>
             {/* <a href="https://wa.me/628117576088" className="shadow focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-800 dark:focus:ring-green-800 ">Let's connect</a> */}
           </div>
           <div className="w-auto">
@@ -56,7 +66,7 @@ const Home: React.FC = () => {
           <p className="text-3xl text-gray-600">it will take you to actionable insights.</p>
         </div>
       </div>
-      <div className="mx-auto px-8 md:px-24 pt-16 pb-10">
+      <div className="mx-auto px-8 md:px-24 pt-16 pb-10" ref={myRef}>
         <div className="md:flex justify-between gap-10">
           <div className="w-full pb-12 md:pb-0">
             <img src="/assets/content1.png" className="h-[460px]" alt="Banner" />
